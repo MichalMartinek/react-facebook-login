@@ -8,16 +8,23 @@ const responseFacebook = (response) => {
 };
 
 class Base extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { autoLoad: false };
+  }
+
   render() {
     return (
       <div>
         <Link to="/dummy">Route to dummy page</Link>
         <FacebookLogin
-          appId="1088597931155576"
-          autoLoad
+          appId="1955810814631617"
+          autoLoad={this.state.autoLoad}
           callback={responseFacebook}
           icon="fa-facebook"
         />
+        <button onClick={() => this.setState({ autoLoad: !this.state.autoLoad })}>Autoload {this.state.autoLoad ? 'yes' : 'no'}</button>
       </div>
     );
   }
