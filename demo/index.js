@@ -19,7 +19,7 @@ class Base extends Component {
       <div>
         <Link to="/dummy">Route to dummy page</Link>
         <FacebookLogin
-          appId="1955810814631617"
+          appId="1088597931155576"
           autoLoad={this.state.autoLoad}
           callback={responseFacebook}
           icon="fa-facebook"
